@@ -4,7 +4,8 @@
   "info": {
     "singularName": "product-amen-test",
     "pluralName": "product-amen-tests",
-    "displayName": "product-amen-test"
+    "displayName": "product",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -13,6 +14,64 @@
   "attributes": {
     "title": {
       "type": "string"
+    },
+    "description": {
+      "type": "blocks"
+    },
+    "banner": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "price": {
+      "type": "decimal"
+    },
+    "instansDelivery": {
+      "type": "boolean"
+    },
+    "files": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "whatsincuded": {
+      "type": "blocks"
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "TECH",
+        "MARKETING",
+        "SECURITY"
+      ]
+    },
+    "orders": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::product-amen-test.product-amen-test",
+      "inversedBy": "products"
+    },
+    "products": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::product-amen-test.product-amen-test",
+      "inversedBy": "orders"
+    },
+    "order": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::order.order",
+      "mappedBy": "products"
     }
   }
 }
