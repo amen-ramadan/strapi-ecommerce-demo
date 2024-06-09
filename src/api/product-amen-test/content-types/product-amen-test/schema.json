@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "product_amen_tests",
+  "info": {
+    "singularName": "product-amen-test",
+    "pluralName": "product-amen-tests",
+    "displayName": "product-amen-test"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    }
+  }
+}
